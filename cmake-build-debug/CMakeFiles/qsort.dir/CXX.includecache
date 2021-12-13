@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dmitry/CLionProjects/qsort/main.cpp
+iostream
+-
+math.h
+-
+vector
+-
+chrono
+-
+fstream
+-
+algorithm
+-
+thread
+-
+ctime
+-
+time.h
+-
+
