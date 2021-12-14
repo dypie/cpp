@@ -84,11 +84,10 @@ void secondOptimizedQsort(T *first, T *last, Compare comp) {
 }
 
 template<typename T>
-void alternativeSwap(T* a, T* b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void alternativeSwap(T* a, T* b) {
+    T temp =std::move(*a);
+    *a = std::move(*b);
+    *b = std::move(temp);
 }
 
 template<typename T>
@@ -142,14 +141,14 @@ void insertionSort(T *first, T *last, Compare comp) {
 int main() {
 //    std::ofstream makeSave ("stats.txt");
 
-//    std::vector<int> vec {8, 1, 2, 4, 5, 6, 4, 5, 5, 3, 5, 45, 3, 5, 45};
+    std::vector<int> vec {8, 1, 2, 4, 5, 6, 4, 5, 5, 3, 5, 45, 3, 5, 45};
 //    std::cout << &vec[vec.size()-1] - &vec[0] << std::endl;
-//
-//    secondOptimizedQsort(&vec[0], &vec[vec.size()-1], asc<int>());
-//
-//    for (int value: vec) {
-//        std::cout << value << std::endl;
-//    }
+
+    secondOptimizedQsort(&vec[0], &vec[vec.size()-1], asc<int>());
+
+    for (int value: vec) {
+        std::cout << value << std::endl;
+    }
 
 //    std::vector<std::vector<int>> vecs;
 //
